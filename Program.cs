@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string filePath = @"C:\Users\rei\Desktop\verhaalsinterklaas\verhaal.txt";
+        string filePath = @"C:\Users\rei\Desktop\sinterklaas\verhaal.txt";
         string[] stories = File.ReadAllLines(filePath);
         Random randomGenerator = new Random();
         int randomNumber = randomGenerator.Next(0, stories.Length);
@@ -15,7 +15,7 @@ class Program
         {
             string name = args[0];
             string present = args[1];
-            Console.WriteLine($"Hallo {name} jouw cadeau is {present} {stories[randomNumber]}");
+            Console.WriteLine($"Hallo {name} jouw cadeau is {present} , verhaal: {stories[randomNumber]}");
         }
         catch (System.Exception)
         {
